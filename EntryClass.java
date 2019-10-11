@@ -1,16 +1,19 @@
+import java.util.Scanner;
+
 public class EntryClass{
 
-    public void studentMethod(int id, String name, int stclass){
-        Student student = new Student(id,name,stclass);
+   /*  public void studentMethod(int id, String name, int stclass,Double precentage){
+        Student student = new Student(id,name,stclass,precentage);
         System.out.println("Student ID: "+student.getId());
         System.out.println("Student name: "+student.getStName());
         System.out.println("Student class: "+student.getStclass());
-        System.out.println("******");
+        System.out.println("student precentage: " +student.getPrecentage());
+        System.out.println("******"); 
 
     }
+ */
 
-
-    public void employeeMethod(int id, String firstName, String lastName){
+    /* public void employeeMethod(int id, String firstName, String lastName){
         Employee employee = new Employee(id,firstName,lastName);
         System.out.println(" Employee ID: "+employee.getId());
         System.out.println("Employee firstName: "+employee.getFirstName());
@@ -18,18 +21,60 @@ public class EntryClass{
         System.out.println("******");
 
     }
+     */
+
+    public void studentInput(){
+        Student student = new Student();
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.println("Enter Student Id: ");
+        student.setId(sc.nextInt());
+        System.out.println("Student ID: "+student.getId());
+        
+        System.out.println("Enter Student Name:");
+        student.setStName(sc.next());
+        System.out.println("student stName: "+student.getStName());
+        
+        
+        System.out.println("Enter Student Class:");
+        student.setStclass(sc.nextInt());
+        System.out.println("student stclass: "+student.getStclass());
+        
+        
+        System.out.println("Enter Student Percentage:");
+        student.setPrecentage(sc.nextDouble());
+        System.out.println("student precentage: "+student.getPrecentage());
+
+        sc.close();
+    }
+        
     
+        public void employeeInput(){
+        Employee employee = new Employee();
+        Scanner sc1 = new Scanner(System.in);
+
+        System.out.println("Entry employee Id: ");
+        employee.setId(sc1.nextInt());
+        System.out.println("employee id: "+employee.getId());
+
+        System.out.println("entry employee firstName: ");
+        employee.setFirstName(sc1.nextLine());
+        //System.out.println("employee firstName:"+employee.getFirstName());
+        System.out.println("Employee First Name: "+employee.getFirstName());
+
+        System.out.println("Entry employee Lastname: ");
+        employee.setLastName(sc1.nextLine());
+        System.out.println("employee Lastname: "+employee.getLastName());
+
+        sc1.close();
+
+    }
     public static void main(String[] args) {
          
         EntryClass entryClass = new EntryClass();
-
-        entryClass.studentMethod(10, "Kalyan", 12);
-        entryClass.studentMethod(12, "pradnya", 13);
-        entryClass.studentMethod(25, "some name", 3);
-
-        entryClass.employeeMethod(1,"pradnya", "shelke");
-        entryClass.employeeMethod(2, "pranjal", "shitole");
-        entryClass.employeeMethod(3, "chhaya", "shelke");
+        //entryClass.studentInput();
+        entryClass.employeeInput();
+        
     }
 
 }    
