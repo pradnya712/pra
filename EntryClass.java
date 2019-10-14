@@ -1,8 +1,11 @@
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.Scanner;
 
 public class EntryClass{
 
-   /*  public void studentMethod(int id, String name, int stclass,Double precentage){
+     public void studentMethod(int id, String name, int stclass,Double precentage){
         Student student = new Student(id,name,stclass,precentage);
         System.out.println("Student ID: "+student.getId());
         System.out.println("Student name: "+student.getStName());
@@ -11,9 +14,9 @@ public class EntryClass{
         System.out.println("******"); 
 
     }
- */
+ 
 
-    /* public void employeeMethod(int id, String firstName, String lastName){
+     public void employeeMethod(int id, String firstName, String lastName){
         Employee employee = new Employee(id,firstName,lastName);
         System.out.println(" Employee ID: "+employee.getId());
         System.out.println("Employee firstName: "+employee.getFirstName());
@@ -21,11 +24,15 @@ public class EntryClass{
         System.out.println("******");
 
     }
-     */
+     
 
     public void studentInput(){
         Student student = new Student();
         Scanner sc = new Scanner(System.in);
+        
+        InputStreamReader r=new InputStreamReader(System.in); 
+        BufferedReader br=new BufferedReader(r); 
+        
         
         System.out.println("Enter Student Id: ");
         student.setId(sc.nextInt());
@@ -53,13 +60,14 @@ public class EntryClass{
         Employee employee = new Employee();
         Scanner sc1 = new Scanner(System.in);
 
+        InputStreamReader r1=new InputStreamReader(System.in);
+        BufferedReader br=new BufferedReader(r1); 
         System.out.println("Entry employee Id: ");
         employee.setId(sc1.nextInt());
         System.out.println("employee id: "+employee.getId());
 
         System.out.println("entry employee firstName: ");
-        employee.setFirstName(sc1.nextLine());
-        //System.out.println("employee firstName:"+employee.getFirstName());
+        employee.setFirstName(sc1.next());
         System.out.println("Employee First Name: "+employee.getFirstName());
 
         System.out.println("Entry employee Lastname: ");
