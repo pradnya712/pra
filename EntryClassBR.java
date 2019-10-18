@@ -2,13 +2,12 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class EntryClassBR{
+public class EntryClassBR{   
+    Student[] student;
 
-   
+       public void studentInput(int i){
 
-       public void studentInput(){
-
-            Student student = new Student();
+            
         
             try{
                            
@@ -17,7 +16,7 @@ public class EntryClassBR{
                 
                 
                 System.out.println("Enter Student Id: ");
-                student.setId(Integer.parseInt(br.readLine()));
+                student[i].setId(Integer.parseInt(br.readLine()));
                 
                 System.out.println("Enter Student Name:");
                 student.setStName(br.readLine());
@@ -28,11 +27,8 @@ public class EntryClassBR{
                 System.out.println("Enter Student Percentage:");
                 student.setPrecentage(Double.parseDouble(br.readLine()));
                 
-                System.out.println("**************************");
-                System.out.println("Student ID: "+student.getId());
-                System.out.println("student stName: "+student.getStName());
-                System.out.println("student stclass: "+student.getStclass());
-                System.out.println("student precentage: "+student.getPrecentage());
+                    
+                
                 
             }
             catch (IOException e){
@@ -42,7 +38,7 @@ public class EntryClassBR{
         }
         
     
-        public void employeeInput(){
+        /* public void employeeInput(){
             Employee employee = new Employee();
         
             try{
@@ -60,21 +56,26 @@ public class EntryClassBR{
             employee.setLastName(br1.readLine());
             
             System.out.println("*****************************");
-            System.out.println("employee id: "+employee.getId());
+            System.out.println("id"+\t)
+            /* System.out.println("employee id: "+employee.getId());
             System.out.println("Employee First Name: "+employee.getFirstName());
             System.out.println("employee Lastname: "+employee.getLastName());
-
-        }
+ 
+            }
             catch (IOException e){
                 System.out.println(e);
-            }
-    }
+            } 
+        }*/
     
     public static void main(String[] args) {
          
         EntryClassBR entryClassbr = new EntryClassBR();
         entryClassbr.studentInput();
-        entryClassbr.employeeInput();
+        //entryClassbr.employeeInput();
+
+        System.out.println("**************************");
+                System.out.println("ID"+"\t"+"Name"+"\t"+"Class"+"\t"+"Percentage ");
+                System.out.println(student.getId()+"\t"+student.getStName()+"\t"+student.getStclass()+"\t"+student.getPrecentage());
         
     }
 

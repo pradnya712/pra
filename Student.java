@@ -3,16 +3,21 @@ public class Student
     private int id;
     private String stName;
     private int stclass;
-    private double precentage;
+    private double percentage;
 
     public Student(){
 
-    }   
-    public Student(int id, String stName, int stclass , Double precentage) {
+    }
+    public Student(int id, String stName) {
+        this.id = id;
+        this.stName = stName;
+    }
+   
+    public Student(int id, String stName, int stclass , Double percentage) {
         this.id = id;
         this.stName = stName;
         this.stclass = stclass;
-        this.precentage = precentage;
+        this.percentage = percentage;
     }
     public int getId() {
         return id;
@@ -39,13 +44,14 @@ public class Student
     }
 
     public double getPrecentage() {
-        return precentage;
+        return percentage;
     }
 
-    public void setPrecentage(double precentage) {
-        this.precentage = precentage;
+    public void setPercentage(double percentage) {
+        this.percentage = percentage;
     }
 
+    
   
 
     

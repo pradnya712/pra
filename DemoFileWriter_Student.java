@@ -37,7 +37,7 @@ public class DemoFileWriter_Student {
             System.out.println("student stclass: "+student.getStclass());
             System.out.println("student precentage: "+student.getPrecentage()); */
             
-            content=student.getId()+" "+student.getStName()+" "+student.getStclass()+" "+student.getPrecentage();
+            content=student.getId()+" \n "+student.getStName()+" \n "+student.getStclass()+" \n "+student.getPrecentage();
             
         }
         catch (IOException e){

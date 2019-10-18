@@ -13,8 +13,7 @@ public class Readingfile {
     
     String line;
     while((line=bReader.readLine())!=null)
-       sb.append(line).append("\n");
-
+       sb.append(line).append("\t");
 
    System.out.println(sb);
   }
